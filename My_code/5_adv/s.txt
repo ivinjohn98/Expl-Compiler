@@ -1,0 +1,27 @@
+decl 
+	int x, *fun(int *i),*y; 
+enddecl
+
+int *fun(int *i)
+{
+	decl
+	enddecl
+	begin
+		*i = *i+1;
+		return i;
+	end
+}
+
+int main()
+{
+	decl
+	enddecl
+	begin
+		read(x);
+		y = fun(&x);
+		write(*y);
+		write(*fun(&x));
+		write(fun(&x));
+		return 0;
+	end
+}

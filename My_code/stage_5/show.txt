@@ -1,0 +1,31 @@
+decl 
+	int x,y, Sort(int *i, int *j); 
+enddecl
+
+int Sort(int *i, int *j)
+{
+	decl
+		int temp;
+	enddecl
+	begin
+		temp = *i;
+		*i = *j;
+		*j = temp;
+		return 0;
+	end
+}
+
+int main()
+{
+	decl
+		int r;
+	enddecl
+	begin
+		read(x);
+		read(y);
+		r = Sort(&x,&y);
+		write(x);
+		write(y);
+		return 0;
+	end
+}

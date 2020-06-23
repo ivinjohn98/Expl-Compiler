@@ -1,0 +1,6 @@
+gcc filename.c -g
+gdb ./a.out
+
+run
+backtrace
+quit

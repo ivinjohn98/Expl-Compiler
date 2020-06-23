@@ -1,0 +1,3 @@
+If a variable of a parent class holds the reference to an object of a descendent class, only methods defined in the parent class are allowed to be invoked using the variable of the parent class
+
+ Unless fun() is defined in class A, the call x.fun() should result in a compilation error even if B and C contains the declaration for fun(). This is because if a variable of a parent class holds the reference to an object of a descendent class, only methods defined in the parent class are allowed to be invoked using the variable of the parent class.

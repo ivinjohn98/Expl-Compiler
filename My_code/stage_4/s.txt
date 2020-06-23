@@ -1,0 +1,5 @@
+decl
+enddecl
+begin
+a=-1;
+end

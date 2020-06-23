@@ -1,0 +1,157 @@
+///////////////////////////////////////////////////
+MATRIX MULTIPLICATIONS:
+
+decl
+int a[2][2],b[2][2],c[2][2],i,j,k;
+enddecl
+begin
+i=0;   
+while(i<2) do
+	j=0;
+	while(j<2) do
+		read(a[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+i=0;
+while(i<2) do
+	j=0;
+	while(j<2) do
+		read(b[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+i=0;
+while(i<2) do
+	j=0;
+	while(j<2) do
+		k=0;
+		c[i][j]=0;
+		while(k<2) do
+			c[i][j]=c[i][j]+a[i][k]*b[k][j];
+			k=k+1;
+		endwhile;
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+i=0;
+while(i<2) do
+	j=0;
+	while(j<2) do
+		write(c[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+end
+////////////////////////////////////////////////////
+BUBBLE SORT:
+
+decl
+int i,j,n,y,a[40];
+enddecl
+begin
+read(n);
+i=0;
+while(i<n) do
+	read(a[i]);
+	i=i+1;
+endwhile;
+i=0;
+while(i<n) do
+	j=0;
+	while(j<(n-1)) do
+		if (a[j] > a[j+1]) then
+			y=a[j];
+			a[j]=a[j+1];
+			a[j+1]=y;
+		endif;
+	j=j+1;
+	endwhile;
+i=i+1;
+endwhile;
+i=0;
+while(i<n) do
+	write(a[i]);
+	i=i+1;
+endwhile;
+end
+////////////////////////////////////////////////////
+Nth Fibonacci Number:
+
+decl
+	int n,f2,f0,f1,i;
+enddecl
+begin
+	read(n);
+	if(n>=2) then
+		f0=0;
+		f1=1;
+		n=n-1;
+		while(n!=0) do
+			f2=f1+f0;
+			f0=f1;
+			f1=f2;
+			n=n-1;
+		endwhile;
+		write(f1);
+	else if(n==1) then
+			write(1);
+		else write(0);
+		endif;
+	endif;
+end
+/////////////////////////////////////////////////////
+Is Prime or Not:
+
+decl
+	int n,i,j;
+enddecl
+begin
+	read(n);
+	j=0;
+	if((n%2)==0) then
+		j=1;
+	else
+		i=3;
+		while(i<=(n/2)) do
+			if((n%i)==0) then
+				j=1;
+			endif;
+			i=i+2;
+		endwhile;
+	endif;
+	if(j==0) then
+		write("Prime");
+	else write("NotPrime");
+	endif;
+end
+/////////////////////////////////////////////////////
+Sum of n factorials (iterative):
+
+decl
+    int n,i,j,sum,k;
+enddecl
+begin
+	read(n);
+	sum=0;
+	k=1;
+	while(k<=n)do
+		if(n<=1) then
+			sum=sum+1;
+		else
+			i=1;
+			j=1;
+			while(i<=k)do
+				j=j*i;
+				i=i+1;
+			endwhile;
+			sum=sum+j;
+		endif;
+		k=k+1;
+	endwhile;
+	write(sum);
+end

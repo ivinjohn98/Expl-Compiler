@@ -1,0 +1,46 @@
+decl
+int a[2][2],b[2][2],c[2][2],i,j,k;
+enddecl
+begin
+i=0;   
+while(i<2) do
+	j=0;
+	while(j<2) do
+		read(a[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+i=0;
+while(i<2) do
+	j=0;
+	while(j<2) do
+		read(b[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+i=0;
+while(i<2) do
+	j=0;
+	while(j<2) do
+		k=0;
+		c[i][j]=0;
+		while(k<2) do
+			c[i][j]=c[i][j]+a[i][k]*b[k][j];
+			k=k+1;
+		endwhile;
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+i=0;
+while(i<2) do
+	j=0;
+	while(j<2) do
+		write(c[i][j]);
+		j=j+1;
+	endwhile;
+	i=i+1;
+endwhile;
+end

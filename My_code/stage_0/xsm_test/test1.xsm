@@ -1,0 +1,21 @@
+0
+2056
+0
+0
+0
+0
+0
+0
+BRKP
+mov R1,2
+mov R2,1
+mov R3,3
+mov R0,R1
+LT R1,R2
+JZ R1,2072
+mov R0,R2
+mov R1,R0
+LT R1,R3
+JZ R1,2080
+MOV R0,R3
+INT 10

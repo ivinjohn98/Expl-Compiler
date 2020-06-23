@@ -1,0 +1,56 @@
+decl
+	void initialize,free(int *x);
+	int alloc();
+enddecl
+
+void initialize()
+{
+	decl
+	int *start,*end;
+	endecl
+	begin
+		start=1024;
+		end=2039;
+		while(start<end)
+		{
+			*start = start+8;
+			start = start+8;
+		}
+		*start = -1;
+	end
+}
+
+int *alloc()
+{
+	decl
+	int *start,*final,*i;
+	endecl
+	begin
+		start=1024;
+		final = 1024;
+		if((*final) != -1)
+		{
+			i= *final;
+			*start =*i;
+		}
+		return *final;
+	end
+}
+
+void free(int *x)
+{
+	decl
+	int *start;
+	enddecl
+	begin
+		start=1024;
+		*x = *start;
+		*start = x;
+	end
+}
+
+int main()
+{
+	decl
+	endecl
+}
